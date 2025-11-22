@@ -1,11 +1,17 @@
-server:
-  port: 8888
-
+# Это имя нужно для "загрузки" (bootstrap)
 spring:
   application:
-    name: config-service
+    name: config-server
   cloud:
     config:
       server:
         git:
-          uri: git@github.com:Mihan03/ai-optimizer-config.git
+          uri: https://github.com/Mihan03/ai-optimizer-config.git
+          default-label: master
+
+  # Явно указываем, что нужно импортировать настройки из Config Server
+  config:
+    import: "optional:configserver:http://localhost:8888"
+
+server:
+  port: 8888

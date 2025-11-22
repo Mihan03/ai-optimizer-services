@@ -7,8 +7,8 @@
 *.ear
 *.zip
 # Все, что генерирует Gradle при сборке
-/build/
-/out/
+build/
+out/
 
 
 # IDE Files and Artifacts (IntelliJ IDEA)
@@ -37,3 +37,5 @@ Thumbs.db
 # Spring Boot
 /src/main/resources/application-local.yml
 /src/main/resources/application-local.properties
+
+AGENTS.md
